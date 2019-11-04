@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<script>
+
+        function returnIndex(){
+  
+          document.forms.showForm.action = '/admin';
+  
+          document.forms.showForm.method = "get";
+  
+          document.forms.showForm.submit();
+  
+        }
+  
+      </script>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <form action="/admin/show" method="POST" id="showForm">
+          <input type="hidden" name="loginName" value=<%=loginName%>>
+          <input type="hidden" name="password" value=<%=password%>>
+         <button type="submit">提交</button>
+         <button type="button" onclick="returnIndex();">返回首页</button>
+      </form>
+  </body>
+</html>
